@@ -1,0 +1,14 @@
+TEST: Verificare GET https://jsonplaceholder.typicode.com/todos/1
+
+
+ARRANGE
+  baseUrl  = "https://jsonplaceholder.typicode.com"
+  endpoint = "/todos/1"
+
+ACT
+  response = HTTP_GET(baseUrl + endpoint)
+
+ASSERT
+  ASSERT response.statusCode == 200
+  ASSERT response.body contains field "title"
+  ASSERT response.body.title is not empty

@@ -1,0 +1,9 @@
+env: dev
+
+service:
+  baseUrl: https://apps.qualiadept.eu/hapifyme
+
+timeouts:
+  connection: 5000
+  read: 5000
+  write: 5000
